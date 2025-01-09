@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Comparison</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <button class="header-btn" onclick="window.location.href='BtnCompare.html'">Compare</button>
+            <button class="header-btn" onclick="window.location.href='Rank.html'">Rank List</button>
+        </div>
+        <div class="header-right">
+            <input type="text" class="search-bar" id="search-bar" placeholder="Search for colleges..." 
+                onfocus="fetchAllColleges()" oninput="filterSuggestions(event)" onkeydown="handleEnter(event)">
+            <ul id="suggestions-list" class="hidden"></ul> <!-- Suggestion list -->
+        </div>
+    </header>
+
+    <main>
+        <h1 class="central-text">"Your One Stop Destination For Finding The Best College"</h1>
+
+        <!-- Container to display college details -->
+        <div id="college-details-container" class="hidden">
+            <!-- College details will be injected here -->
+        </div>
+    </main>
+
+    <script src="script2.js"></script>
+</body>
+</html>

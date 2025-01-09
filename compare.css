@@ -1,0 +1,237 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and main layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header-btn:hover {
+    background-color: #003f7d;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+/* Search bar and suggestions */
+.search-bar {
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: 2px solid #ccc;
+    width: 300px;
+    transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+#compare-suggestions-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgb(2, 21, 233);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    list-style-type: none;
+    padding: 0;
+}
+
+#compare-suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#compare-suggestions-list li:hover {
+    background-color: #110162;
+}
+
+/* Central Text */
+.central-text {
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* College Selection Section */
+#college-select-container {
+    margin: 20px auto;
+    text-align: center;
+    width: 80%;
+}
+
+#selected-colleges {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.selected-college {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.selected-college:hover {
+    background-color: #218838;
+}
+
+/* Compare Button */
+.compare-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 30px;
+    margin-left: 600px;
+    margin-top: 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.compare-btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* Comparison Table */
+#comparison-table-container {
+    width: 90%;
+    margin-top: 40px;
+    text-align: center;
+    overflow-x: auto;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+    padding: 20px;
+}
+
+#comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    table-layout: auto; /* Allow for automatic adjustment */
+}
+
+#comparison-table th, #comparison-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+#comparison-table th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+}
+
+#comparison-table td {
+    background-color: #f9f9f9;
+}
+
+#comparison-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+#comparison-table td {
+    word-wrap: break-word; /* Ensure text inside cells wraps */
+}
+
+/* Hidden elements */
+.hidden {
+    display: none;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .search-bar {
+        width: 200px;
+    }
+
+    .compare-btn {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    #college-select-container {
+        width: 100%;
+    }
+
+    #selected-colleges {
+        flex-direction: column;
+    }
+
+    .selected-college {
+        margin-bottom: 10px;
+    }
+
+    /* Table adjustments */
+    #comparison-table-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #comparison-table {
+        width: 100%;
+        font-size: 12px; /* Make text smaller on smaller screens */
+    }
+
+    #comparison-table th, #comparison-table td {
+        padding: 8px;
+    }
+}

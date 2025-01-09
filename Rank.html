@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Rankings</title>
+    <link rel="stylesheet" href="Rank.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <button class="header-btn" onclick="loadRankings('academicFee')">Academic Fee</button>
+            <button class="header-btn" onclick="loadRankings('hostelFee')">Hostel Fee</button>
+            <button class="header-btn" onclick="loadRankings('averagePackage')">Average Package</button>
+            <button class="header-btn" onclick="loadRankings('highestPackage')">Highest Package</button>
+        </div>
+        <div class="header-right">
+            <a href="Main2.html">
+                <button class="header-btn home-btn">Home</button>
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <h1 style="text-align: center; margin-top: 15px;">College Rankings</h1>
+
+        <!-- Rankings Table -->
+        <div id="ranking-table-container" class="hidden">
+            <table id="ranking-table">
+                <thead>
+                    <tr>
+                        <th>College Name</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-table-body">
+                    <!-- Content will be inserted here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="Rank.js"></script>
+</body>
+</html>

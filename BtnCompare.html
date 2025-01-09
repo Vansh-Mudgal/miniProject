@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Colleges</title>
+    <link rel="stylesheet" href="compare.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <button class="header-btn" onclick="window.location.href='Main2.html'">Home</button>
+            <button class="header-btn" onclick="window.location.href='Rank.html'">Rank List</button>
+        </div>
+        <div class="header-right">
+            <input type="text" class="search-bar" id="compare-search-bar" placeholder="Search for colleges..." oninput="filterCompareSuggestions(event)" onkeydown="handleCompareEnter(event)">
+            <ul id="compare-suggestions-list" class="hidden"></ul> <!-- Suggestion list -->
+        </div>
+    </header>
+
+    <main>
+        <h1 class="central-text">Compare Your Favorite Colleges</h1>
+
+        <!-- College Selection Section -->
+        <div id="college-select-container">
+            <p>Select up to 4 colleges to compare:</p>
+            <div id="selected-colleges" class="college-selection-list">
+                <!-- Selected colleges will appear here -->
+            </div>
+        </div>
+
+        <!-- Compare Button -->
+        <button class="compare-btn" id="compare-button" onclick="compareColleges()">Compare</button>
+
+        <!-- College Comparison Table -->
+        <div id="comparison-table-container" class="hidden">
+            <table id="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Detail</th>
+                        <!-- College columns will be dynamically added here -->
+                    </tr>
+                </thead>
+                <tbody id="comparison-table-body">
+                    <!-- Comparison data will be injected here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="compare2.js"></script>
+</body>
+</html>

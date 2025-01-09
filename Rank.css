@@ -1,0 +1,127 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and main layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7fb;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+    display: flex;
+}
+
+.header-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin-right: 20px;
+    font-size: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.header-btn:hover {
+    background-color: #003f7d;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Home button specific styling */
+.home-btn {
+    background-color: #007bff;
+    margin-left: 20px; /* Adds space between buttons */
+}
+
+.home-btn:hover {
+    background-color: #003f7d;
+}
+
+/* Central Text */
+.central-text {
+    font-size: 36px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    padding: 50px;
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    color: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Ranking Table */
+#ranking-table-container {
+    width: 80%;
+    margin: 40px auto;
+    text-align: center;
+    overflow-x: auto;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+}
+
+#ranking-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+#ranking-table th, #ranking-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+#ranking-table th {
+    background-color: #007bff;
+    color: white;
+    text-transform: uppercase;
+}
+
+#ranking-table td {
+    background-color: #f9f9f9;
+}
+
+#ranking-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Hidden elements */
+.hidden {
+    display: none;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .header-btn {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    #ranking-table-container {
+        width: 100%;
+    }
+}
